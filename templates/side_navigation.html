@@ -1,0 +1,9 @@
+<div class="col-md-4">
+  <h5>Категории</h5>
+  <ul class="list-group">
+    <li class="list-group-item"><a href="/">Все новости</a></li>
+    {% for one_category in categories %}
+    <li class="list-group-item"><a href="{{ url_for('news_detail', id=one_category.id) }}">{{one_category.title}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
